@@ -26,20 +26,26 @@ function TextAnalyzer() {
 
   const toUppercase =()=>{
     let newText = text.toUpperCase(text);
-    setText(newText)
+    setText(newText);
+    showAlert("success" , "Converted to Upper case")
   }
 
   const toLowercase =()=>{
     let newText = text.toLowerCase(text);
-    setText(newText)
+    setText(newText);
+    showAlert("success" , "Converted to Lower case")
+
   }
 
-  const copyText =(copy)=>{
-    navigator.clipboard.writeText(copy)
-  }
+    const copyText =(copy)=>{
+      navigator.clipboard.writeText(copy);
+      // showAlert("success" , "Copied to clipboard")
+
+    }
 
   const clearText =()=>{
-    setText("")
+    setText("");  
+    showAlert("success" , "Text Cleared");  
   }
 
   const countWords=()=>{

@@ -13,7 +13,7 @@
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                                <Link className={`nav-link text-${props.modeText}`} to="/">Home</Link>
+                                <Link className={`nav-link text-${props.modeText}`} to="/">{props.abc}</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className={`nav-link active text-${props.modeText}`} aria-current="page" to="/analyzer">Text Analyzer</Link>

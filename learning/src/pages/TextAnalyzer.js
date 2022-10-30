@@ -11,7 +11,6 @@ function TextAnalyzer() {
   const [alert, setAlert] = useState(null); 
 
 
-
   const showAlert = (type ,message)=>{
     setAlert({
       type: type,
@@ -95,11 +94,7 @@ function TextAnalyzer() {
   return (
     <>  
     
-    <Alert alert={alert}/>
-    <div className="form-check form-switch m-3 ">
-      <input className="form-check-input" onClick={changeMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-      <label className={`form-check-label text-${modeText}`} htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
-    </div>  
+    <Alert alert={alert}/> 
     <div className="btn-group custom-center" role="group" aria-label="Basic mixed styles example">
         <button type="button" className="btn btn-primary" onClick={modePurple}>Purple</button>
         <button type="button" className="btn btn-primary"  onClick={modeBlue}>Blue</button>

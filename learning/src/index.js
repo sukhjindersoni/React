@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { BrowserRouter as Router, Routes ,Route ,Link} from "react-router-dom"
+import { BrowserRouter as Router} from "react-router-dom"
 
 
 
@@ -13,3 +13,6 @@ root.render(
     </Router>
   </React.StrictMode>
 );
+
+//App must be enclosed in router not on every component like i did earlier. So the router works as a whole on the app
+//To install router - npm install react-router-dom

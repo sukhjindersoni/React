@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Alert from "../text-analyzer-components/Alert";
+import Alert from "../components/Alert";
 
 function TextAnalyzer({ modeText }) {
   const [text, setText] = useState("");
@@ -19,7 +19,7 @@ function TextAnalyzer({ modeText }) {
   const handleChange = (event) => {
     setText(event.target.value);
   };
-//This handleChange method is catching all the values sent to the textarea by updating the value to event.target.value now this event is fired when user types
+  //This handleChange method is catching all the values sent to the textarea by updating the value to event.target.value now this event is fired when user types
 
   const toUppercase = () => {
     let newText = text.toUpperCase(text);
@@ -35,7 +35,7 @@ function TextAnalyzer({ modeText }) {
 
   const copyText = (copy) => {
     navigator.clipboard.writeText(copy);
-    // showAlert("success" , "Copied to clipboard")
+    showAlert("success", "Copied to clipboard")
   };
 
   const clearText = () => {
@@ -48,12 +48,12 @@ function TextAnalyzer({ modeText }) {
     //other method is text.split(" ").filter((element)=>{return element.length!=0}).length
     //This basically takes the text splits it by " " and makes an array from which the filter checks every element
     //if the length is non zero it passes true and the elements length is added to the number
-  };   
+  };
 
   return (
     <>
       <Alert alert={alert} />
-      
+
 
       <h2 className={`mt-2 text-center text-${modeText}`}>
         Enter the text to analyze below
@@ -89,7 +89,7 @@ function TextAnalyzer({ modeText }) {
           disabled={text.length === 0}
           type="button"
           className={`btn btn-secondary m-2`}
-          onClick={copyText(text)}
+          onClick={copyText}//Too many rerenders ERROR - because of copytext(text) being a calback it kept  recalling it 
         >
           Copy Text
         </button>

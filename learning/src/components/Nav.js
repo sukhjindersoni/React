@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function Nav({ title, mode, modeText, setMode }) { // Destructuring props
+
     return (
         <nav className={`navbar navbar-expand-lg bg-${mode} position-fixed w-100`} style={{ maxHeight: "60px", zIndex: "2" }}>
             <div className="container-fluid">

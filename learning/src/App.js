@@ -32,13 +32,41 @@ function App() {
                     <Route exact path="/" element={<Home mode={mode} modeText={modeText} />} />
                     <Route exact path="/text-analyzer" element={<TextAnalyzer mode={mode} modeText={modeText} />} />
 
-                    <Route exact path="/NewsWeb" element={<News pageSize="6" category="general"/>} />
-                    <Route exact path="/NewsWeb/business" element={<News pageSize="6" category="business"/>} />
-                    <Route exact path="/NewsWeb/entertainment" element={<News pageSize="6" category="entertainment"/>} />
-                    <Route exact path="/NewsWeb/health" element={<News pageSize="6" category="health"/>} />
-                    <Route exact path="/NewsWeb/science" element={<News pageSize="6" category="science"/>} />
-                    <Route exact path="/NewsWeb/sports" element={<News pageSize="6" category="sports"/>} />
-                    <Route exact path="/NewsWeb/technology" element={<News pageSize="6" category="technology"/>} />
+                    <Route 
+                    exact
+                        path="/NewsWeb" 
+                        element={<News pageSize="6" category="general"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/business" 
+                        element={<News pageSize="6" category="business"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/entertainment" 
+                        element={<News pageSize="6" category="entertainment"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/health" 
+                        element={<News pageSize="6" category="health"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/science" 
+                        element={<News pageSize="6" category="science"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/sports" 
+                        element={<News pageSize="6" category="sports"/>} 
+                    />
+                    <Route 
+                    exact
+                        path="/NewsWeb/technology" 
+                        element={<News pageSize="6" category="technology"/>} 
+                    />
                 </Routes>
             </div>
         </div>

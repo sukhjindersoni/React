@@ -35,7 +35,7 @@ export class News extends Component {
     }
   }
   callAPi = async () => {
-    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=fb9e37a6f83b49da8f321ee5bf61c962&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=us&category=${this.props.category}&apiKey=${process.env.REACT_APP_NewsWeb_Key}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parsedData = await data.json();
@@ -52,7 +52,7 @@ export class News extends Component {
     });
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${
       this.props.category
-    }&apiKey=fb9e37a6f83b49da8f321ee5bf61c962&pageSize=${
+    }&apiKey=${process.env.REACT_APP_NewsWeb_Key}&pageSize=${
       this.props.pageSize
     }&page=${this.state.page + 1}`;
     this.setState({ loading: true });
@@ -71,7 +71,7 @@ export class News extends Component {
   prePage = async () => {
     let url = `https://newsapi.org/v2/top-headlines?country=us&category=${
       this.props.category
-    }&apiKey=fb9e37a6f83b49da8f321ee5bf61c962&pageSize=${
+    }&apiKey=${process.env.REACT_APP_NewsWeb_Key}&pageSize=${
       this.props.pageSize
     }&page=${this.state.page - 1}`;
     this.setState({ loading: true });
@@ -87,7 +87,7 @@ export class News extends Component {
   };
 
   render() {
-    return (
+    return (               //Top loading
       <div>
         <h2 className="text-center ">Latest News</h2>
         {this.state.loading && <Spinner />}
@@ -109,7 +109,6 @@ export class News extends Component {
             })}
         </div>
 
-        
         {!this.state.loading && (
           <div className="container d-flex justify-content-between my-3">
             {this.state.page !== 1 && (
@@ -130,7 +129,7 @@ export class News extends Component {
                 id="asd"
               >
                 Next
-              </button> ////////INFINITE SCROLL
+              </button>                                                                                 ////////INFINITE SCROLL
             )}
           </div>
         )}

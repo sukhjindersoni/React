@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-
 const App = () => {
   return (
-    console.log("Printed")
+    
   );
 }
 
